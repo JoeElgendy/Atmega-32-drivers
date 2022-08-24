@@ -1,0 +1,49 @@
+/**************************************************/
+/*				Author:Youssef ElGendy			  */	
+/*				Date: 14-8-2022					  */
+/*				Version: 1.1					  */
+/*				Module:DIO_Private				  */
+/**************************************************/
+
+#ifndef DIO_PRIVATE_H
+#define DIO_PRIVATE_H
+
+/*Seting Inital Direction		*/
+#define DIO_U8_PORTA_DIR  CONC_BIT(DIO_U8_PORTA_PIN7_DIR,DIO_U8_PORTA_PIN6_DIR,DIO_U8_PORTA_PIN5_DIR,DIO_U8_PORTA_PIN4_DIR,DIO_U8_PORTA_PIN3_DIR,DIO_U8_PORTA_PIN2_DIR,DIO_U8_PORTA_PIN1_DIR,DIO_U8_PORTA_PIN0_DIR) 
+#define DIO_U8_PORTB_DIR  CONC_BIT(DIO_U8_PORTB_PIN7_DIR,DIO_U8_PORTB_PIN6_DIR,DIO_U8_PORTB_PIN5_DIR,DIO_U8_PORTB_PIN4_DIR,DIO_U8_PORTB_PIN3_DIR,DIO_U8_PORTB_PIN2_DIR,DIO_U8_PORTB_PIN1_DIR,DIO_U8_PORTB_PIN0_DIR) 
+#define DIO_U8_PORTC_DIR  CONC_BIT(DIO_U8_PORTC_PIN7_DIR,DIO_U8_PORTC_PIN6_DIR,DIO_U8_PORTC_PIN5_DIR,DIO_U8_PORTC_PIN4_DIR,DIO_U8_PORTC_PIN3_DIR,DIO_U8_PORTC_PIN2_DIR,DIO_U8_PORTC_PIN1_DIR,DIO_U8_PORTC_PIN0_DIR) 
+#define DIO_U8_PORTD_DIR  CONC_BIT(DIO_U8_PORTD_PIN7_DIR,DIO_U8_PORTD_PIN6_DIR,DIO_U8_PORTD_PIN5_DIR,DIO_U8_PORTD_PIN4_DIR,DIO_U8_PORTD_PIN3_DIR,DIO_U8_PORTD_PIN2_DIR,DIO_U8_PORTD_PIN1_DIR,DIO_U8_PORTD_PIN0_DIR) 
+
+/*defining Input and Output */
+#define DIO_U8_INPUT			0
+#define	DIO_U8_OUTPUT			1
+
+/*Seting Inital Values */
+#define DIO_U8_PORTA_VAL  CONC_BIT(DIO_U8_PORTA_PIN7_InitVal,DIO_U8_PORTA_PIN6_InitVal,DIO_U8_PORTA_PIN5_InitVal,DIO_U8_PORTA_PIN4_InitVal,DIO_U8_PORTA_PIN3_InitVal,DIO_U8_PORTA_PIN2_InitVal,DIO_U8_PORTA_PIN1_InitVal,DIO_U8_PORTA_PIN0_InitVal) 
+#define DIO_U8_PORTB_VAL  CONC_BIT(DIO_U8_PORTB_PIN7_InitVal,DIO_U8_PORTB_PIN6_InitVal,DIO_U8_PORTB_PIN5_InitVal,DIO_U8_PORTB_PIN4_InitVal,DIO_U8_PORTB_PIN3_InitVal,DIO_U8_PORTB_PIN2_InitVal,DIO_U8_PORTB_PIN1_InitVal,DIO_U8_PORTB_PIN0_InitVal) 
+#define DIO_U8_PORTC_VAL  CONC_BIT(DIO_U8_PORTC_PIN7_InitVal,DIO_U8_PORTC_PIN6_InitVal,DIO_U8_PORTC_PIN5_InitVal,DIO_U8_PORTC_PIN4_InitVal,DIO_U8_PORTC_PIN3_InitVal,DIO_U8_PORTC_PIN2_InitVal,DIO_U8_PORTC_PIN1_InitVal,DIO_U8_PORTC_PIN0_InitVal) 
+#define DIO_U8_PORTD_VAL  CONC_BIT(DIO_U8_PORTD_PIN7_InitVal,DIO_U8_PORTD_PIN6_InitVal,DIO_U8_PORTD_PIN5_InitVal,DIO_U8_PORTD_PIN4_InitVal,DIO_U8_PORTD_PIN3_InitVal,DIO_U8_PORTD_PIN2_InitVal,DIO_U8_PORTD_PIN1_InitVal,DIO_U8_PORTD_PIN0_InitVal) 
+
+/*Defining PORTA,DDRA,PINA		*/
+#define DDRA 		*((volatile u8 *) 0x3A)
+#define PORTA		*((volatile u8 *) 0x3B)
+#define PINA		*((volatile u8 *) 0x39)
+
+/*Defining PORTB,DDRB,PINB		*/					    
+#define DDRB		*((volatile u8 *) 0x37)
+#define PORTB		*((volatile u8 *) 0x38)
+#define PINB		*((volatile u8 *) 0x36)
+
+/*Defining PORTC,DDRC,PINC		*/					    
+#define DDRC		*((volatile u8 *) 0x34)
+#define PORTC		*((volatile u8 *) 0x35)
+#define PINC		*((volatile u8 *) 0x33)
+
+/*Defining PORTD,DDRD,PIND		*/					    
+#define DDRD		*((volatile u8 *) 0x31)
+#define PORTD		*((volatile u8 *) 0x32)
+#define PIND		*((volatile u8 *) 0x30)
+
+
+
+#endif
