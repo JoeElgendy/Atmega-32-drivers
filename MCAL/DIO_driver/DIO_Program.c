@@ -50,9 +50,9 @@ void DIO_VoidSetPinValue (u8 Copy_u8PortName,u8 Copy_u8Pin,u8 Copy_u8Value)
 		
 		switch(Copy_u8Value)
 		{
-			case DIO_U8_HIGH: SET_BIT(PORTB,Copy_u8Pin);
+			case DIO_U8_HIGH: SET_BIT(PORTC,Copy_u8Pin);
 								break;
-			case DIO_U8_LOW:  CLR_BIT(PORTB,Copy_u8Pin);
+			case DIO_U8_LOW:  CLR_BIT(PORTC,Copy_u8Pin);
 								break;
 		}
 	}
@@ -61,9 +61,9 @@ void DIO_VoidSetPinValue (u8 Copy_u8PortName,u8 Copy_u8Pin,u8 Copy_u8Value)
 		
 		switch(Copy_u8Value)
 		{
-			case DIO_U8_HIGH: SET_BIT(PORTB,Copy_u8Pin);
+			case DIO_U8_HIGH: SET_BIT(PORTD,Copy_u8Pin);
 								break;
-			case DIO_U8_LOW:  CLR_BIT(PORTB,Copy_u8Pin);
+			case DIO_U8_LOW:  CLR_BIT(PORTD,Copy_u8Pin);
 								break;
 		}
 	}	
