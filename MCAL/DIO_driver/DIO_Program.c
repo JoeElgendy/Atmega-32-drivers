@@ -76,20 +76,16 @@ void DIO_VoidSetPinValue (u8 Copy_u8PortName,u8 Copy_u8Pin,u8 Copy_u8Value)
 void DIO_VoidSetPortValue		(u8 Copy_u8PortName,u8 Copy_u8Value)
 {
 		if(Copy_u8PortName=='A'||Copy_u8PortName=='a'){
-			u8* Local_u8Port= DIO_U8_PORTA_VAL;
-			SET_PORT(*Local_u8Port,Copy_u8Value);
+			PORTA=Copy_u8Value;
 		}
 		else if(Copy_u8PortName=='B'||Copy_u8PortName=='b'){
-			u8* Local_u8Port= DIO_U8_PORTB_VAL;
-			SET_PORT(*(Local_u8Port),Copy_u8Value);
+			PORTA=Copy_u8Value;
 		}
 		else if(Copy_u8PortName=='C'||Copy_u8PortName=='c'){
-			u8* Local_u8Port= DIO_U8_PORTC_VAL;
-			SET_PORT(*Local_u8Port,Copy_u8Value);
+			PORTC=Copy_u8Value;
 		}
 		else if(Copy_u8PortName=='D'||Copy_u8PortName=='d'){
-			u8* Local_u8Port= DIO_U8_PORTD_VAL;
-			SET_PORT(*Local_u8Port,Copy_u8Value);
+			PORTD=Copy_u8Value;
 		}
 		else{
 		//error}
