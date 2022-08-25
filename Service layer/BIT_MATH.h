@@ -10,7 +10,7 @@
 #define SET_BIT(VAR,BIT)					VAR |=(1<<(BIT))
 #define TOG_BIT(VAR,BIT)					VAR ^=(1<<(BIT))
 #define CLR_BIT(VAR,BIT)					VAR&= ~(1<<(BIT))
-#define GET_BIT(VAR,BIT)				   (VAR>>BIT)&1
+#define GET_BIT(VAR,BIT)				   ((VAR>>BIT)&1)
 #define SET_PORT(VAR,VALUE)					VAR=VALUE
 
 #define GET_LOW_NIBBLE(VAR)					VAR&=0x0f
