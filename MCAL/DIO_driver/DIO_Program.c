@@ -12,12 +12,16 @@
 #include "DIO_config.h"
 #include "DIO_private.h"
 
-void DIO_VoidSetPortDirection(void)
+void DIO_Init(void)
 {
 	DDRA=DIO_U8_PORTA_DIR;
 	DDRB=DIO_U8_PORTB_DIR;
 	DDRC=DIO_U8_PORTC_DIR;
 	DDRD=DIO_U8_PORTD_DIR;
+	PORTA=DIO_U8_PORTA_VAL;
+	PORTB=DIO_U8_PORTB_VAL;
+	PORTC=DIO_U8_PORTC_VAL;
+	PORTD=DIO_U8_PORTD_VAL;
 }
 void DIO_VoidSetPinValue (u8 Copy_u8PortName,u8 Copy_u8Pin,u8 Copy_u8Value)
 {	
@@ -72,39 +76,43 @@ void DIO_VoidSetPinValue (u8 Copy_u8PortName,u8 Copy_u8Pin,u8 Copy_u8Value)
 void DIO_VoidSetPortValue		(u8 Copy_u8PortName,u8 Copy_u8Value)
 {
 		if(Copy_u8PortName=='A'||Copy_u8PortName=='a'){
-			SET_PORT(DIO_U8_PORTA_VAL,Copy_u8Value);
+			u8* Local_u8Port= DIO_U8_PORTA_VAL;
+			SET_PORT(*Local_u8Port,Copy_u8Value);
 		}
 		else if(Copy_u8PortName=='B'||Copy_u8PortName=='b'){
-			SET_PORT(DIO_U8_PORTB_VAL,Copy_u8Value);
+			u8* Local_u8Port= DIO_U8_PORTB_VAL;
+			SET_PORT(*(Local_u8Port),Copy_u8Value);
 		}
 		else if(Copy_u8PortName=='C'||Copy_u8PortName=='c'){
-			SET_PORT(DIO_U8_PORTC_VAL,Copy_u8Value);
+			u8* Local_u8Port= DIO_U8_PORTC_VAL;
+			SET_PORT(*Local_u8Port,Copy_u8Value);
 		}
 		else if(Copy_u8PortName=='D'||Copy_u8PortName=='d'){
-			SET_PORT(DIO_U8_PORTD_VAL,Copy_u8Value);
+			u8* Local_u8Port= DIO_U8_PORTD_VAL;
+			SET_PORT(*Local_u8Port,Copy_u8Value);
 		}
 		else{
 		//error}
 }}
 
 u8 	 DIO_u8GetPinValue			(u8 Copy_u8PortName,u8 Copy_u8Pin){
-	u8 Local_u8Value=DIO_U8_LOW;
+	u8 U8Local_u8Value=DIO_U8_LOW;
 	if(Copy_u8PortName=='A'||Copy_u8PortName=='a'){
-			u8Local_u8Value=GET_BIT(*PORTA,Copy_u8Pin);
+			U8Local_u8Value=GET_BIT(PINA,Copy_u8Pin);
 		}
 		else if(Copy_u8PortName=='B'||Copy_u8PortName=='b'){
-			u8Local_u8Value=GET_BIT(*PORTB,Copy_u8Pin);
+			U8Local_u8Value=GET_BIT(PINB,Copy_u8Pin);
 		}
 		else if(Copy_u8PortName=='C'||Copy_u8PortName=='c'){
-			u8Local_u8Value=GET_BIT(*PORTC,Copy_u8Pin);
+			U8Local_u8Value=GET_BIT(PINC,Copy_u8Pin);
 		}
 		else if(Copy_u8PortName=='D'||Copy_u8PortName=='d'){
-			u8Local_u8Value=GET_BIT(*PORTD,Copy_u8Pin);
+			U8Local_u8Value=GET_BIT(PIND,Copy_u8Pin);
 		}
 		else{
 			//error
 		}
-		return Local_u8Value;
+		return U8Local_u8Value;
 }
 
 

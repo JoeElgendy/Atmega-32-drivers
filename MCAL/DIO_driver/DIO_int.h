@@ -8,8 +8,8 @@
 #ifndef		DIO_INT_H
 #define 	DIO_INT_H
 
-#define DIO_u8_HIGH 			1
-#define	DIO_u8_LOW				0
+#define DIO_U8_HIGH 			1
+#define	DIO_U8_LOW				0
 
 
 #define DIO_U8_PIN0 			0
@@ -47,13 +47,13 @@
 
 
 //This function automaticaly SET the DDR directions Based on the data on config
-void DIO_VoidSetPortDirection 	(void);
+void DIO_Init (void);
 
 
 void DIO_VoidSetPinValue 		(u8 Copy_u8PortName,u8 Copy_u8Pin,u8 Copy_u8Value);
 void DIO_VoidSetPortValue		(u8 Copy_u8PortName,u8 Copy_u8Value);
 u8 	 DIO_u8GetPinValue			(u8 Copy_u8Port,u8 Copy_u8Pin);
-u8 	 DIO_u8GetPinValue			(u8 Copy_u8Port);
+u8 	 DIO_u8GetPinValue			(u8 Copy_u8Port,u8 Copy_u8Pin);
 
 
 
