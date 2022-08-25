@@ -91,7 +91,7 @@ void DIO_VoidSetPortValue		(u8 Copy_u8PortName,u8 Copy_u8Value)
 		//error}
 }}
 
-u8 	 DIO_u8GetPinValue			(u8 Copy_u8PortName,u8 Copy_u8Pin){
+u8 	 DIO_U8GetPinValue			(u8 Copy_u8PortName,u8 Copy_u8Pin){
 	u8 U8Local_u8Value=DIO_U8_LOW;
 	if(Copy_u8PortName=='A'||Copy_u8PortName=='a'){
 			U8Local_u8Value=GET_BIT(PINA,Copy_u8Pin);
@@ -111,7 +111,50 @@ u8 	 DIO_u8GetPinValue			(u8 Copy_u8PortName,u8 Copy_u8Pin){
 		return U8Local_u8Value;
 }
 
-
+void DIO_U8SetPinDirection		(u8 Copy_u8PortName,u8 Copy_u8Pin,u8 Copy_u8Value)
+{
+	if(Copy_u8PortName=='A'||Copy_u8PortName=='a'){
+		switch(Copy_u8Value)
+		{
+			case DIO_U8_HIGH: SET_BIT(DDRA,Copy_u8Pin);
+								break;
+			case DIO_U8_LOW:  CLR_BIT(DDRA,Copy_u8Pin);
+								break;
+		}
+		}
+	else if(Copy_u8PortName=='B'||Copy_u8PortName=='b'){
+		switch(Copy_u8Value)
+		{
+			case DIO_U8_HIGH: SET_BIT(DDRB,Copy_u8Pin);
+								break;
+			case DIO_U8_LOW:  CLR_BIT(DDRB,Copy_u8Pin);
+								break;
+		}
+			
+		}
+	else if(Copy_u8PortName=='C'||Copy_u8PortName=='c'){
+		switch(Copy_u8Value)
+		{
+			case DIO_U8_HIGH: SET_BIT(DDRC,Copy_u8Pin);
+								break;
+			case DIO_U8_LOW:  CLR_BIT(DDRC,Copy_u8Pin);
+								break;
+		}
+		}
+	else if(Copy_u8PortName=='D'||Copy_u8PortName=='d'){
+		switch(Copy_u8Value)
+							{
+			case DIO_U8_HIGH: SET_BIT(DDRD,Copy_u8Pin);
+								break;
+			case DIO_U8_LOW:  CLR_BIT(DDRD,Copy_u8Pin);
+								break;
+							}
+			
+		}
+		else{
+			//error
+		}
+}
 	
 	
 
