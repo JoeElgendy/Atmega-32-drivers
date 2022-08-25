@@ -12,38 +12,44 @@
 #define	DIO_U8_LOW				0
 
 
-#define DIO_U8_PIN0 			0
-#define DIO_U8_PIN1 			1
-#define DIO_U8_PIN2 			2
-#define DIO_U8_PIN3 			3
-#define DIO_U8_PIN4 			4
-#define DIO_U8_PIN5 			5
-#define DIO_U8_PIN6 			6
-#define DIO_U8_PIN7 			7
-#define DIO_U8_PIN8 			8
-#define DIO_U8_PIN9 			9
-#define DIO_U8_PIN10			10
-#define DIO_U8_PIN11			11
-#define DIO_U8_PIN12			12
-#define DIO_U8_PIN13			13
-#define DIO_U8_PIN14			14
-#define DIO_U8_PIN15			15
-#define DIO_U8_PIN16			16
-#define DIO_U8_PIN17			17
-#define DIO_U8_PIN18			18
-#define DIO_U8_PIN19			19
-#define DIO_U8_PIN20			20
-#define DIO_U8_PIN21			21
-#define DIO_U8_PIN22			22
-#define DIO_U8_PIN23			23
-#define DIO_U8_PIN24			24
-#define DIO_U8_PIN25			25
-#define DIO_U8_PIN26			26
-#define DIO_U8_PIN27			27
-#define DIO_U8_PIN28			28
-#define DIO_U8_PIN29			29
-#define DIO_U8_PIN30			30
-#define DIO_U8_PIN31			31
+/**********************************PORTA*******************************************************************/	
+#define DIO_U8_PORTA_PIN0				0				//Pin 0
+#define DIO_U8_PORTA_PIN1				1				//Pin 1
+#define DIO_U8_PORTA_PIN2				2				//Pin 2		Relay
+#define DIO_U8_PORTA_PIN3				3				//Pin 3		Buzzer
+#define DIO_U8_PORTA_PIN4				4				//Pin 4		7SEGEMENT DISPLAY/ LCD_DATA_LINES
+#define DIO_U8_PORTA_PIN5				5				//Pin 5		7SEGEMENT DISPLAY/ LCD_DATA_LINES
+#define DIO_U8_PORTA_PIN6				6				//Pin 6		7SEGEMENT DISPLAY/ LCD_DATA_LINES
+#define DIO_U8_PORTA_PIN7				7				//Pin 7		7SEGEMENT DISPLAY/ LCD_DATA_LINES
+/**********************************PORTB*******************************************************************/	
+#define DIO_U8_PORTB_PIN0				0				//Pin 0
+#define DIO_U8_PORTB_PIN1				1				//Pin 1		7SEGEMENT DISPLAY/LCD_RS
+#define DIO_U8_PORTB_PIN2				2				//Pin 2		7SEGEMENT DISPLAY/LCD_RW
+#define DIO_U8_PORTB_PIN3				3				//Pin 3		7SEGEMENT DECIMAL/LCD_E
+#define DIO_U8_PORTB_PIN4				4				//Pin 4
+#define DIO_U8_PORTB_PIN5				5				//Pin 5
+#define DIO_U8_PORTB_PIN6				6				//Pin 6
+#define DIO_U8_PORTB_PIN7				7				//Pin 7
+/**********************************PORTC*******************************************************************/	
+#define DIO_U8_PORTC_PIN0				0				//Pin 0
+#define DIO_U8_PORTC_PIN1				1				//Pin 1
+#define DIO_U8_PORTC_PIN2				2				//Pin 2		LED0
+#define DIO_U8_PORTC_PIN3				3				//Pin 3
+#define DIO_U8_PORTC_PIN4				4				//Pin 4
+#define DIO_U8_PORTC_PIN5				5				//Pin 5
+#define DIO_U8_PORTC_PIN6				6				//Pin 6
+#define DIO_U8_PORTC_PIN7				7				//Pin 7		LED1	
+/**********************************PORTD*******************************************************************/	
+#define DIO_U8_PORTD_PIN0				0				//Pin 0		PB0
+#define DIO_U8_PORTD_PIN1				1				//Pin 1
+#define DIO_U8_PORTD_PIN2				2				//Pin 2		PB2
+#define DIO_U8_PORTD_PIN3				3				//Pin 3		LED3
+#define DIO_U8_PORTD_PIN4				4				//Pin 4
+#define DIO_U8_PORTD_PIN5				5				//Pin 5
+#define DIO_U8_PORTD_PIN6				6				//Pin 6		PB3
+#define DIO_U8_PORTD_PIN7				7				//Pin 7
+
+
 
 
 //This function automaticaly SET the DDR directions Based on the data on config
