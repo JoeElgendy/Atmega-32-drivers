@@ -79,7 +79,7 @@ void DIO_VoidSetPortValue		(u8 Copy_u8PortName,u8 Copy_u8Value)
 			PORTA=Copy_u8Value;
 		}
 		else if(Copy_u8PortName=='B'||Copy_u8PortName=='b'){
-			PORTA=Copy_u8Value;
+			PORTB=Copy_u8Value;
 		}
 		else if(Copy_u8PortName=='C'||Copy_u8PortName=='c'){
 			PORTC=Copy_u8Value;
