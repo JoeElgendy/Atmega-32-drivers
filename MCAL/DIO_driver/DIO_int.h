@@ -60,7 +60,7 @@ void DIO_VoidSetPinValue 		(u8 Copy_u8PortName,u8 Copy_u8Pin,u8 Copy_u8Value);
 void DIO_VoidSetPortValue		(u8 Copy_u8PortName,u8 Copy_u8Value);
 u8 	 DIO_U8GetPinValue			(u8 Copy_u8Port,u8 Copy_u8Pin);
 void DIO_U8SetPinDirection		(u8 Copy_u8PortName,u8 Copy_u8Pin,u8 Copy_u8Value);			//useful in 7Seg and LCD
-
+void DIO_U8SetPortDirection		(u8 Copy_u8PortName,u8 Copy_u8Value);
 
 
 

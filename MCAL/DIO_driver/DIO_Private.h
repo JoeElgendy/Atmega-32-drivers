@@ -44,6 +44,10 @@
 #define PORTD		*((volatile u8 *) 0x32)
 #define PIND		*((volatile u8 *) 0x30)
 
+#define PORT_DDR_OUTPUT		0xFF
+#define PORT_DDR_INPUT		0x00
 
+#define OUTPUT				1
+#define INPUT				0
 
 #endif

@@ -157,6 +157,51 @@ void DIO_U8SetPinDirection		(u8 Copy_u8PortName,u8 Copy_u8Pin,u8 Copy_u8Value)
 		}
 }
 	
+
+void DIO_U8SetPortDirection		(u8 Copy_u8PortName,u8 Copy_u8Value){
+		if(Copy_u8PortName=='A'||Copy_u8PortName=='a'){
+		switch(Copy_u8Value)
+		{
+			case DIO_U8_HIGH: PORTA=PORT_DDR_OUTPUT;
+								break;
+			case DIO_U8_LOW:  PORTA=PORT_DDR_INPUT;
+								break;
+		}
+		}
+	else if(Copy_u8PortName=='B'||Copy_u8PortName=='b'){
+		switch(Copy_u8Value)
+		{
+			case DIO_U8_HIGH: PORTB=PORT_DDR_OUTPUT;
+								break;
+			case DIO_U8_LOW:  PORTB=PORT_DDR_INPUT;
+								break;
+		}
+			
+		}
+	else if(Copy_u8PortName=='C'||Copy_u8PortName=='c'){
+		switch(Copy_u8Value)
+		{
+			case DIO_U8_HIGH: PORTC=PORT_DDR_OUTPUT;
+								break;
+			case DIO_U8_LOW:  PORTC=PORT_DDR_INPUT;
+								break;
+		}
+		}
+	else if(Copy_u8PortName=='D'||Copy_u8PortName=='d'){
+		switch(Copy_u8Value)
+							{
+			case DIO_U8_HIGH: PORTD=PORT_DDR_OUTPUT;
+								break;
+			case DIO_U8_LOW:  PORTD=PORT_DDR_INPUT;
+								break;
+							}
+			
+		}
+		else{
+			//error
+		}
+}
+	
 	
 
 
